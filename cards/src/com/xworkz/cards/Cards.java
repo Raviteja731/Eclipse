@@ -4,7 +4,7 @@ public class Cards {
 
 	// Explicit method
 	
-	public Cards() {
+public Cards() {
 		
 		System.out.println("running no-args method");
 	}
