@@ -10,7 +10,7 @@ public class CrackerRunner {
 		cracker.shopName = "Om Crackers";
 		cracker.quantity = 100;
 		
-		cracker.display();	
+		cracker.display();	     
 
 	}
 

@@ -8,7 +8,7 @@ public class FlowerRunner {
 
 		Flower flower = new Flower(150);
 		flower.shopName = "PushpaRaj Flowers";
-		flower.flowerSmells = true;
+		flower.flowerSmells = true;      
 		
 		
 		flower.display();	

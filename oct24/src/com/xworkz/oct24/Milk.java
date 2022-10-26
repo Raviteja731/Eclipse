@@ -14,7 +14,7 @@ public class Milk {
 		}
 	
 	static 
-		{
+		{        
 		Milk.sweet =true;
 				
 		}

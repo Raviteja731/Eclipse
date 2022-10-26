@@ -11,7 +11,7 @@ public class Cracker {
 	
 	public Cracker(int price)
 		{
-		this.price = price;
+		this.price = price;  
 		}
 	
 	static 

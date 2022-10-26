@@ -7,7 +7,7 @@ public class ShirtBrand {
 	public static int size; 
 	public int price; 
 	public String shopName ;  
-	
+					
 	public ShirtBrand(int price)
 		{
 		this.price = price;

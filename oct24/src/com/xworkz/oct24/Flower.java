@@ -9,7 +9,7 @@ public class Flower {
 	public boolean flowerSmells ;  
 	public String shopName; 
 	
-	public Flower(int price)
+	public Flower(int price)       
 		{
 		this.price = price;
 		}
