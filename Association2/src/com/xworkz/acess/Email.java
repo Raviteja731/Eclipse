@@ -5,7 +5,7 @@ public class Email {
 	public String id;
 	public String password;
 	public long mobilno;
-	public Company company;
+public Company company;
 	
 	
 	public Email(String id, String password, long mobilno,Company company) {
