@@ -16,7 +16,7 @@ public class MoonRunner {
 		
 		moon.display();
 		System.out.println("==============");
-		satelite.showOff();
+		satelite.display();
 	}
 
 }

@@ -12,7 +12,7 @@ public class PrasanthRunner {
 		Director director = new Director("Puri", "Action", 20, 10, 10);
 		
 		Prasanth prasanth2  = new Director("Puri", "Action", 20, 10, 10);
-		director.showOff();
+		director.display();;
 		System.out.println("===================");
 		prasanth.display();
 	}

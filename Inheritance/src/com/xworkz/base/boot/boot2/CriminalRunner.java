@@ -13,7 +13,7 @@ public class CriminalRunner {
 		
 		Criminal criminal2 = new Ravi("Wheeling", 420, "Prashant", 25, true, true);
 		
-		ravi.show();
+		ravi.display();
 		System.out.println("==============");
 		criminal.display();
 	}

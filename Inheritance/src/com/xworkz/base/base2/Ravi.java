@@ -10,7 +10,7 @@ public class Ravi extends Criminal {
 		this.jail = jail;
 		this.happy = happy;
 	}
-	public void show()
+	public void display()
 	{
 		super.display();
 		System.out.println(this.jail);

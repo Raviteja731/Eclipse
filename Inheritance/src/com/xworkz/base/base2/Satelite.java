@@ -10,7 +10,7 @@ public class Satelite extends Moon {
 		this.name = name;
 		this.isro = isro;
 	}
-	public void showOff()
+	public void display()
 	{
 		super.display();
 		System.out.println(this.isro);

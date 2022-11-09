@@ -10,7 +10,7 @@ public class Director extends Prasanth {
 		this.hits = hits;
 		this.flops = flops;
 	}
-	public void showOff()
+	public void display()
 	{
 		super.display();
 		System.out.println(this.hits);
