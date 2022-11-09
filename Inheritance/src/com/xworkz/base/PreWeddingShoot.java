@@ -11,6 +11,11 @@ public class PreWeddingShoot {
 		this.location = location;
 		this.price = price;
 	}
-	
+	public void PreWeddingShoot(Photos photos)
+	{
+		System.out.println(photos.location);
+		System.out.println(photos.price);
+		System.out.println(photos.ShopName);
+	}
 	
 }
