@@ -12,6 +12,9 @@ public class PreWeddingShootRunner {
 		PreWeddingShoot preShoot2 = new Photos("Preethi Photos & MarriageVideos", "Ooty", 10000);
 		
 		Photos photos = new Photos("Preethi Photos & MarriageVideos", "Ooty", 10000);
+		
+		preShoot.PreWeddingShoot(photos);
+		
 		System.out.println(preShoot.ShopName);
 		System.out.println(preShoot2.location);
 		System.out.println(photos.price);
