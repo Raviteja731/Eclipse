@@ -40,7 +40,7 @@ public class Mobile {
 		if(obj instanceof Mobile) {
 			System.out.println("checking obj is instance of god");
 			Mobile mobile= (Mobile)obj;
-			if(this.brand.equals(mobile.brand)&& this.colour.equals(mobile.colour)&& this.shopName.equals(mobile.shopName)&& this.manufCountry.equals(mobile.manufCountry)&& this.manufYear.equals(mobile.manufYear)) {
+			if(this.brand.equals(mobile.brand)&& this.colour.equals(mobile.colour)&& this.shopName.equals(mobile.shopName)&& this.manufCountry.equals(mobile.manufCountry)) {
 				System.out.println("checking obj is equal to god,u can procced");
 				return true;
 			}
