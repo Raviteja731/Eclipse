@@ -16,7 +16,9 @@ public class TitanRunner {
 		
 		Digital digi = new Titan();
 		
-		obj.
+		//obj.notify(); // 9 methods
+		
+		System.out.println(digi.qualitygood());
 		
 	}
 

@@ -4,15 +4,16 @@ public class Digital {
 	
 	
 
-	double watchPrice() 
+	public double watchPrice() 
 	{
 		return 2000.4;
 	}
-	String qualitygood()
+	public String qualitygood()
 	{
-		Digital dig = new Digital();
+		System.out.println("Running Digitial method");
+		//Digital dig = new Digital();
 		return "No";
-		dig.
+		//dig.
 
 		
 	}

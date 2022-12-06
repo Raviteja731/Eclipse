@@ -2,14 +2,18 @@ package com.xworkz.task;
 
 public class Fastrack extends Digital {
 
+	public String brand;
 	
-	int manufYear() 
+	
+	
+	public int manufYear() 
 	{
 		return 2011 ;
 	}
 	@Override
-	String qualitygood()
+ public	String qualitygood()
 	{
+		System.out.println("Running fastrack method");
 		return "No";
 	}
 }
