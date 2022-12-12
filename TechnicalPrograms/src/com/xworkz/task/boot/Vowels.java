@@ -1,4 +1,4 @@
-package com.xworkz.task.boot;
+ package com.xworkz.task.boot;
 
 public class Vowels {
 

@@ -7,6 +7,9 @@ public class Bottel extends Water {
 	{
 	  System.out.println("running apps method");
 		super.app();
+		super.mobile();
 	}
+	
+	
 	
 }

@@ -4,7 +4,8 @@ public class EvenOrOdd {
 
 	public static void main(String[] args) {
 
-		int number = 2;
+		int number = 0;
+
 		if (number % 2 == 0) {
 			System.out.println("Number is even :" + number);
 		} else {
@@ -12,6 +13,4 @@ public class EvenOrOdd {
 		}
 
 	}
-	}
-
-
+}

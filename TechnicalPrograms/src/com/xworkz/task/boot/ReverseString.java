@@ -23,9 +23,11 @@ public class ReverseString {
 		
 		System.out.println(System.lineSeparator());
 
-		int dist;
-		char str[] = ref.toCharArray();
-		System.out.println("Duplicate haracters in array :"+ref);
+//		int dist = 0;
+//		char str[] = ref.toCharArray();
+//		System.out.println("Duplicate haracters in array :"+ref);
+//		
+//		System.out.println(System.lineSeparator());
 //		for(int i=0;i<ref.length(); i++)
 //		{
 //			for(int j=i+1; j<ref.length();j++)
@@ -40,8 +42,8 @@ public class ReverseString {
 //			ref=ref.replaceAll(d,"");
 //			dist=0;
 //		}
-	
-		
+//	
+//		
 		
 	}
 }
