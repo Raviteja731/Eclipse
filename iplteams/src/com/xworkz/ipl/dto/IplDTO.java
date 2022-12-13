@@ -3,21 +3,24 @@ package com.xworkz.ipl.dto;
 public class IplDTO extends AbstractAuditDTO {
 
 	private String teamName;
-	private String captialName;
+	private String captianName;
 	private boolean ownerAlive;
 	private double purse;
 	private int wins;
 	private int defeats;
 	
+	@Override
+	public String toString() {
+		return "IplDTO [teamName=" + teamName + ", captianName=" + captianName + ", ownerAlive=" + ownerAlive
+				+ ", purse=" + purse + ", wins=" + wins + ", defeats=" + defeats + ", toString()=" + super.toString()
+				+ "]";
+	}
+
 	public IplDTO() {
 		System.out.println("Running default const of IplDO");
 	}
 
-	@Override
-	public String toString() {
-		return "IplDTO [teamName=" + teamName + ", captialName=" + captialName + ", ownerAlive=" + ownerAlive
-				+ ", purse=" + purse + ", wins=" + wins + ", defeats=" + defeats + "]";
-	}
+	
 
 	public String getTeamName() {
 		return teamName;
@@ -28,11 +31,11 @@ public class IplDTO extends AbstractAuditDTO {
 	}
 
 	public String getCaptialName() {
-		return captialName;
+		return captianName;
 	}
 
 	public void setCaptialName(String captialName) {
-		this.captialName = captialName;
+		this.captianName = captialName;
 	}
 
 	public boolean isOwnerAlive() {

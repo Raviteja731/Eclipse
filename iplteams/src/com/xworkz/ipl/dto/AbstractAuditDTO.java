@@ -13,6 +13,14 @@ public abstract class AbstractAuditDTO implements Serializable {
 	public AbstractAuditDTO() {
 		System.out.println("Running default const");
 	}
+	
+
+	@Override
+	public String toString() {
+		return "AbstractAuditDTO [createdBy=" + createdBy + ", createdDate=" + createdDate + ", updatedBy=" + updatedBy
+				+ ", updatedDate=" + updatedDate + "]";
+	}
+
 
 	public String getCreatedBy() {
 		return createdBy;

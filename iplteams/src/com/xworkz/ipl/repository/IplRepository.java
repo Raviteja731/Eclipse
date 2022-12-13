@@ -1,12 +1,15 @@
-package com.xworkz.ipl.repository;
+ package com.xworkz.ipl.repository;
 
 import com.xworkz.ipl.dto.IplDTO;
 
 public interface IplRepository {
 
-	boolean creat(IplDTO ipl);
+	boolean create(IplDTO ipl);
 	
 	default int total() {
 		return 0;
+	}
+	default IplDTO findteamName(String argument) {
+		return null;
 	}
 }
