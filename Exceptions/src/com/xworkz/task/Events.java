@@ -78,10 +78,10 @@ import org.w3c.dom.ls.LSException;
 
 public class Events {
 
-	public void book()
+	public void book()throws Exception
 	{
 		System.out.println("Running book method");
-		throw new RuntimeException();
+		throw new Exception();
 	}
 	public void mobile()
 	{

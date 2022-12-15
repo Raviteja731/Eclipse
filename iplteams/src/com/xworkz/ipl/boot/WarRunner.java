@@ -23,7 +23,7 @@ public class WarRunner {
 		
 		WarDTO dt1 = new WarDTO();
 
-		dt1.setName("Russia Ukrarain War");
+		dt1.setName("india Ukrarain War");
 		dt1.setStartdate(LocalDateTime.now());
 		dt1.setEndDate(LocalDateTime.of(0, 0, 0, 0, 0));
 		dt1.setStartedBy("Russia");
@@ -39,6 +39,7 @@ public class WarRunner {
 		
 		WarDTO dt11 = imp.findByStartDateAndEndDate(LocalDateTime.of(1955, 11, 9, 12, 56), LocalDateTime.MAX);
 		System.out.println(dt11);
+		
 		System.out.println(imp.total());
 		
 

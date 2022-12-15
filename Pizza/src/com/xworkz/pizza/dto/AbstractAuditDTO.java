@@ -1,25 +1,24 @@
-package com.xworkz.ipl.dto;
+package com.xworkz.pizza.dto;
 
-import java.io.Serializable;
+import java.time.LocalDateTime;
 
-public abstract class AbstractAuditDTO implements Serializable {
+public abstract class AbstractAuditDTO {
 
 	private String createdBy;
-	private LocalDateTime createdDate;
+	private LocalDateTime creaatedDate;
 	private String updatedBy;
 	private LocalDateTime updatedDate;
 	
-	public AbstractAuditDTO() {
-		System.out.println("Running default const");
+	public AbstractAuditDTO() 
+	{
+		System.out.println("Running Default const in AbstractAuditDTO");
 	}
-	
 
 	@Override
 	public String toString() {
-		return "AbstractAuditDTO [createdBy=" + createdBy + ", createdDate=" + createdDate + ", updatedBy=" + updatedBy
-				+ ", updatedDate=" + updatedDate + "]";
+		return "AbstractAuditDTO [createdBy=" + createdBy + ", creaatedDate=" + creaatedDate + ", updatedBy="
+				+ updatedBy + ", updatedDate=" + updatedDate + "]";
 	}
-
 
 	public String getCreatedBy() {
 		return createdBy;
@@ -29,12 +28,12 @@ public abstract class AbstractAuditDTO implements Serializable {
 		this.createdBy = createdBy;
 	}
 
-	public LocalDateTime getCreatedDate() {
-		return createdDate;
+	public LocalDateTime getCreaatedDate() {
+		return creaatedDate;
 	}
 
-	public void setCreatedDate(LocalDateTime createdDate) {
-		this.createdDate = createdDate;
+	public void setCreaatedDate(LocalDateTime creaatedDate) {
+		this.creaatedDate = creaatedDate;
 	}
 
 	public String getUpdatedBy() {
