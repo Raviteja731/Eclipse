@@ -28,9 +28,6 @@ public class Rocket {
 	public long getBudget() {
 		return budget;
 	}
-
-	
-	
 	
 	
 }

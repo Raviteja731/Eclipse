@@ -12,6 +12,13 @@ public class Season {
 	
 	
 	
+	public Season(String name, int duration, String startingMonth) {
+		super();
+		this.name = name;
+		this.duration = duration;
+		this.startingMonth = startingMonth;
+	}
+
 	@Value("Baragal")
 	public void setName(String name) {
 		this.name = name;
