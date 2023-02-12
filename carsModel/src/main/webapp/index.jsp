@@ -29,6 +29,10 @@
 					<input class="form-control me-2" type="search" placeholder="Search"
 						aria-label="Search"> <a class="btn btn-outline-primary"
 						href="index.jsp">Home</a>
+						<br>
+						 <a class="btn btn-outline-primary"
+						href="index.jsp">Login</a>
+			
 				</form>
 			</div>
 		</nav>
