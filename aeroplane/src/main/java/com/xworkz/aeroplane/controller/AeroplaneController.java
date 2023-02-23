@@ -59,7 +59,7 @@ public class AeroplaneController {
 		if (violations.isEmpty()) {
 			System.out.println("No violations , goto succecss page" + aeroplaneDTO);
 			model.addAttribute("aeroplaneDTO", aeroplaneDTO);
-			return "aeroplane";
+			return "AeroplaneSerarch";
 		}
 		model.addAttribute("classType", classType);
 		model.addAttribute("countryNames", countryNames);
