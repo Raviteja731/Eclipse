@@ -17,14 +17,14 @@ import javax.persistence.Table;
 	@NoArgsConstructor
 	@Getter
 	@Setter
-	@NamedQuery(name = "findByName", query = "select Entity from ForestEntity for where for.name='Bandipura'")
-	/*@NamedQuery(name = "FindByState", query = ("select Entity from ForestEntity for where  for.state='Karnataka' "))
-	@NamedQuery(name = "FindByNameAndState", query = ("select Entity.area,Entity.state from ForestEntity Entity where name='Uttarakhand'"))
-	@NamedQuery(name = "FindAreabyname", query = ("select  Entity.area from ForestEntity Entity where Entity.name='Birds'"))
+	@NamedQuery(name = "findByName", query = "select Entity from ForestEntity for where for.name='Moka'")
+	@NamedQuery(name = "FindByState", query = ("select Entity from ForestEntity for where  for.state='Karnataka' "))
+	@NamedQuery(name = "FindByNameAndState", query = ("select Entity.area,Entity.state from ForestEntity Entity where name='Banglore'"))
+	@NamedQuery(name = "FindAreabyname", query = ("select  Entity.area from ForestEntity Entity where Entity.name='Animals'"))
 	@NamedQuery(name = "findidAndname", query = ("select Entity.id from ForestEntity Entity where Entity.name='Sundarbans' and for.state='Karnataka'"))
 	@NamedQuery(name = "findNameByID", query = ("select Entity.name from ForestEntity Entity where id=1"))
 	@NamedQuery(name = "findCount", query = ("select count(Entity.id) from ForestEntity Entity "))
-	@NamedQuery(name = "maxArea", query = ("select Max(Entity.id) from ForestEntity Entity where area='Karnataka'"))*/
+	@NamedQuery(name = "maxArea", query = ("select Max(Entity.id) from ForestEntity Entity where area='AndraPradesh'"))
 	
 	public class ForestEntity {
 		

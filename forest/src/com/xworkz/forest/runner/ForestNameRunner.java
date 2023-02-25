@@ -9,6 +9,7 @@ public class ForestNameRunner {
 
 	public static void main(String[] args) {
 
+		
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("com.xworkz");
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 		Query query = entityManager.createNamedQuery("findByName");
