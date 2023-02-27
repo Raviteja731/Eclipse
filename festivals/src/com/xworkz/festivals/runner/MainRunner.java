@@ -43,6 +43,30 @@ public class MainRunner {
 		EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();
 		manager.persist(festivalsEntity);
+		manager.persist(festivalsEntity1);
+		manager.persist(festivalsEntity2);
+		manager.persist(festivalsEntity3);
+		manager.persist(festivalsEntity5);
+		manager.persist(festivalsEntity6);
+		manager.persist(festivalsEntity7);
+		manager.persist(festivalsEntity8);
+		manager.persist(festivalsEntity9);
+		manager.persist(festivalsEntity10);
+		manager.persist(festivalsEntity11);
+		manager.persist(festivalsEntity12);
+		manager.persist(festivalsEntity13);
+		manager.persist(festivalsEntity14);
+		manager.persist(festivalsEntity15);
+		manager.persist(festivalsEntity16);
+		manager.persist(festivalsEntity17);
+		manager.persist(festivalsEntity18);
+		manager.persist(festivalsEntity19);
+		manager.persist(festivalsEntity20);
+		manager.persist(festivalsEntity21);
+		manager.persist(festivalsEntity22);
+		manager.persist(festivalsEntity23);
+		manager.persist(festivalsEntity24);
+
 		transaction.commit();
 
 		System.out.println(festivalsEntity);

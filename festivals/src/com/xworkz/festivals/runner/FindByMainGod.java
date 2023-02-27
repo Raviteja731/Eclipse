@@ -10,15 +10,14 @@ import com.xworkz.festivalsEntity.FestivalsEntity;
 public class FindByMainGod {
 
 	public static void main(String[] args) {
-		
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory("com.xworkz");
-		EntityManager manager =	factory.createEntityManager();
-		Query query =manager.createNamedQuery("FindByMainGod");
-		query.setParameter("boy", "Ganesh");
-		Object object=  query.getSingleResult();
-		FestivalsEntity entity = (FestivalsEntity)object;
-		System.out.println(entity);
 
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("com.xworkz");
+		EntityManager manager = factory.createEntityManager();
+		Query query = manager.createNamedQuery("FindByMainGod");
+		query.setParameter("boy", "Ganesh");
+		Object object = query.getResultList();
+
+		System.out.println(object);
 
 	}
 

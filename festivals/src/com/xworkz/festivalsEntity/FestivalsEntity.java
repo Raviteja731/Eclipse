@@ -12,8 +12,7 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "festivals")
-@NoArgsConstructor
-@NamedQuery(name = "findByIdAndName" , query = "select entity.id from FestivalsEntity entity where entity.name=:by")
+@NamedQuery(name = "findByIdAndName", query = "select entity.id from FestivalsEntity entity where entity.name=:by")
 @NamedQuery(name = "FindByNameAndRegionAndMainGod", query = "select entity.name from FestivalsEntity entity where  entity.region=:rby  and entity.mainGod=:byy ")
 @NamedQuery(name = "FindByMainGod", query = "select entity from FestivalsEntity entity where mainGod=:boy")
 @NamedQuery(name = "FindTotalDaysByName", query = "select entity.totalDays from FestivalsEntity entity where entity.name=:by")
@@ -39,7 +38,11 @@ public class FestivalsEntity {
 	private String sweet;
 	@Column(name = "mainGod")
 	private String mainGod;
-	
+
+	public FestivalsEntity() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public FestivalsEntity(String name, String region, int totalDays, String sweet, String mainGod) {
 		super();
 		this.name = name;
@@ -102,6 +105,5 @@ public class FestivalsEntity {
 	public void setMainGod(String mainGod) {
 		this.mainGod = mainGod;
 	}
-	
-	
+
 }
