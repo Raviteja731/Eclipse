@@ -26,7 +26,7 @@
 			<form class="d-flex">
 				<input class="form-control me-2" type="search" placeholder="Search"
 					aria-label="Search"> <a class="btn btn-outline-primary"
-					href="abc">Home</a>
+					href="abc">Home</a> <a  class="btn btn-outline-primary" href="findByAwardName.jsp">FindByName</a>
 			</form>
 		</div>
 	</nav>
@@ -41,19 +41,19 @@
 				<label for="exampleFormControlInput1" class="form-label">Award
 					Name</label> <input type="text" " class="form-control"
 					id="exampleFormControlInput1" placeholder="Enter Award Name"
-					name="awardName"/>
+					name="awardName" />
 			</div>
 			<div class="mb-2">
 				<label for="exampleFormControlInput1" class="form-label">Award
 					MadeBy</label> <input type="text" " class="form-control"
 					id="exampleFormControlInput1" placeholder="Enter Award MadeBy"
-					name="awardMadeBy"/>
+					name="awardMadeBy" />
 			</div>
 			<div class="mb-3">
 				<label for="exampleFormControlInput1" class="form-label">First
 					Recived</label> <input type="text" " class="form-control"
 					id="exampleFormControlInput1"
-					placeholder="Enter First Reciver Name" name="firstReciverName"/>
+					placeholder="Enter First Reciver Name" name="firstReciverName" />
 			</div>
 			<div class="mb-4">
 				<input type="radio" value="true" name="Recived">Recived <input
@@ -65,7 +65,7 @@
 					id="exampleFormControlInput1" placeholder="Enter Recived Date"
 					name="recivedDate">
 			</div>
-			<div >
+			<div>
 				<label for="exampleFormControlInput1" class="form-label">Given
 					By</label> <input type=text " class="form-control"
 					id="exampleFormControlInput1" placeholder="Enter Given By"

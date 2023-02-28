@@ -58,13 +58,14 @@
 		<b>Welcome to search page.....</b>
 	</h1>
 
-	<h4><b>id:-</b></h4><h4 style="color: red">${AwardDTO.id}</h4><br>
 	<h4><b>awardName:- </b></h4><h4 style="color: red">${AwardDTO.awardName}</h4><br>
 	<h4><b>firstReciverName</b></h4><h4 style="color: red">${AwardDTO.firstReciverName}</h4><br>
 	<h4><b>recivedDate:- </b></h4><h4 style="color: blue">${AwardDTO.recivedDate}</h4><br>
 	<h4><b>givenBy:- </b></h4><h4 style="color: red">${AwardDTO.givenBy}</h4><br>
-	<h4><b>Recived:- </b></h4><h4 style="color: red">${AwardDTO.Recived}</h4><br>
-	<h4><b>Not_Recived:- </b></h4><h4 style="color: red">${AwardDTO.Not_Recived}</h4><br>
+	<h4><b>Recived:- </b></h4><h4 style="color: red">${AwardDTO.isRecived()}</h4><br>
+	<h4><b>Not_Recived:- </b></h4><h4 style="color: red">${AwardDTO.isNot_Recived()}</h4><br>
+	<h4><b>awardMadeBy:- </b></h4><h4 style="color: blue">${AwardDTO.awardMadeBy}</h4><br>
+	
 
 
 

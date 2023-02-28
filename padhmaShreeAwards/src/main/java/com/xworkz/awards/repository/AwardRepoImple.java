@@ -1,9 +1,11 @@
 package com.xworkz.awards.repository;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
+import javax.persistence.Query;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -32,6 +34,7 @@ public class AwardRepoImple implements AwardRepository {
 		return true;
 	}
 
+	@Override
 	public AwardEntity findBy(int id) {
 
 		System.out.println("Running findBy...");
@@ -40,6 +43,25 @@ public class AwardRepoImple implements AwardRepository {
 		manager.close();
 
 		return entity;
+	}
+
+	@Override
+	public List<AwardEntity> findByAwardName(String AwardName) {
+		System.out.println("Running findByAwardName in repoImpl...");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		try {
+		Query query = entityManager.createNamedQuery("findByAwardName");
+		query.setParameter("by", AwardName);
+		List<AwardEntity> list = query.getResultList();
+		if (AwardName != null && !list.isEmpty()) {
+			System.out.println(list.size());
+			return list;
+		}
+		}
+		finally {
+			entityManager.close();
+		}
+		return AwardRepository.super.findByAwardName(AwardName);
 	}
 
 }

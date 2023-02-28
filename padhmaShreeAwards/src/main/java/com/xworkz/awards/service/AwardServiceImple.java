@@ -1,8 +1,14 @@
 package com.xworkz.awards.service;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Set;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
@@ -34,6 +40,7 @@ public class AwardServiceImple implements AwardService {
 		Set<ConstraintViolation<AwardDTO>> violations = validator.validate(dto);
 		if (violations != null && !violations.isEmpty()) {
 			System.out.println("violations in dto " + dto);
+
 			return violations;
 		}
 		System.out.println("violations not found");
@@ -50,9 +57,11 @@ public class AwardServiceImple implements AwardService {
 		return Collections.emptySet();
 	}
 
+	@Override
 	public AwardDTO findby(int id) {
 		if (id > 0) {
 			AwardEntity awardEntity = awardRepository.findBy(id);
+			System.out.println(awardEntity);
 			System.out.println("Entity is found in service for id" + id);
 			AwardDTO dto = new AwardDTO();
 
@@ -63,10 +72,38 @@ public class AwardServiceImple implements AwardService {
 			dto.setRecivedDate(awardEntity.getRecivedDate());
 			dto.setRecived(awardEntity.isRecived());
 			dto.setNot_Recived(awardEntity.isNot_Recived());
-			System.out.println(awardRepository.save(awardEntity));
 			return dto;
 		}
-		return AwardService.super.findby(id);
+		return null;
 	}
+
+	 @Override
+	public List<AwardDTO> findAwardName(String awardName) {
+			System.out.println("Running findAwardName...");
+			List<AwardEntity> list = awardRepository.findByAwardName(awardName);
+			if (list!= null&& !list.isEmpty()) {
+				
+				List<AwardDTO>  awardDTOs = new ArrayList<AwardDTO>();
+				
+				for (AwardEntity awardEntity : list) {
+				
+					AwardDTO dto = new AwardDTO();
+					dto.setAwardName(awardEntity.getAwardName());
+					dto.setAwardMadeBy(awardEntity.getAwardMadeBy());
+					dto.setFirstReciverName(awardEntity.getFirstRecived());
+					dto.setGivenBy(awardEntity.getGivenBy());
+					dto.setRecivedDate(awardEntity.getRecivedDate());
+					dto.setRecived(awardEntity.isRecived());
+					dto.setNot_Recived(awardEntity.isNot_Recived());
+					awardDTOs.add(dto);
+				}
+				return awardDTOs;
+			} else {
+				System.err.println("awardDTOs is null");
+				return AwardService.super.findAwardName(awardName);
+			}
+		
+	}
+	
 
 }

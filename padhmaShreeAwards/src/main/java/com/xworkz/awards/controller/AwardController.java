@@ -1,5 +1,7 @@
 package com.xworkz.awards.controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 import javax.validation.ConstraintViolation;
@@ -12,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.xworkz.awards.dto.AwardDTO;
 import com.xworkz.awards.service.AwardService;
@@ -19,7 +22,9 @@ import com.xworkz.awards.service.AwardService;
 @Controller
 @RequestMapping("/")
 public class AwardController {
-
+	
+	
+	
 	@Autowired
 	private AwardService awardService;
 
@@ -56,4 +61,35 @@ public class AwardController {
 		return "searchPage";
 	}
 
+	@GetMapping("se")
+	public String search(@RequestParam int id,Model model) {
+	AwardDTO awardDTO =	awardService.findby(id);
+		if (awardDTO!=null) {
+			System.out.println("==========================================");
+			System.out.println(awardDTO);
+			model.addAttribute("AwardDTO", awardDTO);
+			return "searchPage";
+		}
+		else {
+			System.err.println("id not found");
+			return "searchPage";
+		}
+		
+	}
+	
+	@GetMapping("/findByAwardName")
+	public String findName(Model model,@RequestParam String AwardName) {
+		
+		System.out.println("Running findName...");
+		List<AwardDTO> list = awardService.findAwardName(AwardName);
+		
+		if(list!= null&& !list.isEmpty()) {
+			model.addAttribute("list", list);
+			return "findByAwardName";
+		}else {
+			System.err.println("Dataa is not Found");
+			return "findByAwardName";
+		}
+		
+	}
 }

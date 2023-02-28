@@ -3,13 +3,14 @@ package com.xworkz.awards.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "award")
-@NoArgsConstructor
+@NamedQuery(name = "findByAwardName", query = "select ent from AwardEntity ent where ent.AwardName=:by")
 public class AwardEntity {
 
 	@Id

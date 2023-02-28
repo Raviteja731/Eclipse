@@ -1,5 +1,7 @@
 package com.xworkz.awards.service;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.Set;
 
 import javax.validation.ConstraintViolation;
@@ -11,9 +13,12 @@ public interface AwardService {
 
 	Set<ConstraintViolation<AwardDTO>> validateAndSave(AwardDTO dto);
 	
-	default AwardDTO findby(int id) {
-		System.out.println("Running findBy....");
-		return null;
-	}
+	 AwardDTO findby(int id) ;
+	 
+	 default List<AwardDTO> findAwardName(String awardName){
+		return Collections.emptyList();
+		 
+		 
+	 }
 	
 }

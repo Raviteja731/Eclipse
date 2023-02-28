@@ -1,4 +1,4 @@
-package com.xworkz.forest.runner;
+package Repository.runner;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
