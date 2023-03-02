@@ -24,18 +24,15 @@ public class AwardDTO {
 	private boolean Recived;
 	@NotNull
 	private boolean Not_Recived;
+	private int id;
 
 	public AwardDTO() {
 		System.out.println("Created AwardDTO....");
 	}
 
-	@Override
-	public String toString() {
-		return "AwardDTO [awardName=" + awardName + ", awardMadeBy=" + awardMadeBy + ", firstReciverName="
-				+ firstReciverName + ", recivedDate=" + recivedDate + ", givenBy=" + givenBy + ", Recived=" + Recived
-				+ ", Not_Recived=" + Not_Recived + "]";
-	}
+	
 
+	
 	public AwardDTO(
 			@Size(min = 3, max = 15, message = "Award Name Should Be More Than 3 And less Than 15..!") String awardName,
 			@Size(min = 3, max = 15, message = "awardMadeBy Name Should Be More Than 3 And less Than 15..!") String awardMadeBy,
@@ -53,6 +50,17 @@ public class AwardDTO {
 		Not_Recived = not_Recived;
 	}
 
+
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	
 	public String getAwardName() {
 		return awardName;
 	}
@@ -107,6 +115,16 @@ public class AwardDTO {
 
 	public void setNot_Recived(boolean not_Recived) {
 		Not_Recived = not_Recived;
+	}
+
+
+
+
+	@Override
+	public String toString() {
+		return "AwardDTO [awardName=" + awardName + ", awardMadeBy=" + awardMadeBy + ", firstReciverName="
+				+ firstReciverName + ", recivedDate=" + recivedDate + ", givenBy=" + givenBy + ", Recived=" + Recived
+				+ ", Not_Recived=" + Not_Recived + "]";
 	}
 
 	

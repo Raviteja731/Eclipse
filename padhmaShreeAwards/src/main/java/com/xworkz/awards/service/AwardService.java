@@ -17,8 +17,11 @@ public interface AwardService {
 	 
 	 default List<AwardDTO> findAwardName(String awardName){
 		return Collections.emptyList();
-		 
-		 
 	 }
 	
+	Set<ConstraintViolation<AwardDTO>> validateAndUpdate(AwardDTO awardDTO);
+	
+	default boolean validateAndDelete(int id) {
+		return false;
+	}
 }

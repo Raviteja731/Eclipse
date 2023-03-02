@@ -15,7 +15,8 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 	crossorigin="anonymous"></script>
-<title>X-Workz</title></head>
+<title>X-Workz</title>
+</head>
 <body>
 <nav class="navbar navbar-green bg-dark">
 			<div class="container-fluid">
@@ -48,6 +49,8 @@
 					<th>givenBy</th>
 					<th>Recived</th>
 					<th>Not_Recived</th>
+					<th>Edit</th>
+					<th>Delete</th>
 
 
 
@@ -64,6 +67,8 @@
 						<td>${r.givenBy}</td>
 						<td>${r.isRecived()}</td>
 						<td>${r.isNot_Recived()}</td>
+						<td><a href="update?id=${p.id}"}>Edit</a></td>
+						<td><a href="delete?id=${p.id}" class="btn btn-danger"}>Delete</a></td>
 					</tr>
 				</c:forEach>
 

@@ -1,15 +1,15 @@
-package com.xworkz.awards.controller;
 
-import java.util.ArrayList;
+ 
+ 
+ package com.xworkz.awards.controller;
+
 import java.util.List;
 import java.util.Set;
 
 import javax.validation.ConstraintViolation;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -91,5 +91,41 @@ public class AwardController {
 			return "findByAwardName";
 		}
 		
+	}
+	
+	@GetMapping("/update")
+	public String onUpdate(@RequestParam int id,Model model) {
+		System.out.println("Running onUpdate");
+		AwardDTO dto= this.awardService.findby(id);
+		model.addAttribute("dto",dto);
+		
+		return "Update";
+	}
+	
+	@PostMapping("/update")
+	public String onUpdate(Model model,AwardDTO awardDto) {
+		System.out.println("Running onUpdate post");
+		Set<ConstraintViolation<AwardDTO>> violtion= this.awardService.validateAndUpdate(awardDto);
+		if(!violtion.isEmpty()) {
+			model.addAttribute("err",violtion);
+			return "Update";
+		}else {
+			model.addAttribute("msg", "Updated Successfully");
+		return "Update";
+		}
+	}
+	
+	@GetMapping("/delete")
+	public String onDelete(@RequestParam int id,Model model) {
+		System.out.println("Running onDelete");
+		boolean delete=this.awardService.validateAndDelete(id);
+		if(delete=true) {
+			System.out.println("deleted data of :"+id);
+			model.addAttribute("delete", "Deleted successfully : ID : ");
+			model.addAttribute("id",id);
+		}else {
+			model.addAttribute("notDeleted","Id not found");
+		}
+		return "findByAwardName";
 	}
 }

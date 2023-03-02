@@ -64,4 +64,34 @@ public class AwardRepoImple implements AwardRepository {
 		return AwardRepository.super.findByAwardName(AwardName);
 	}
 
+	@Override
+	public boolean update(AwardEntity awardEntity) {
+		System.out.println("Running update");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		try {
+	EntityTransaction entityTransaction = entityManager.getTransaction();
+	entityTransaction.begin();
+	entityManager.merge(awardEntity);
+	entityTransaction.commit();
+	return true;
+		}finally {
+			entityManager.close();
+		}
+	}
+
+	@Override
+	public boolean delete(int id) {
+		System.out.println("Running delete");
+	EntityManager entityManager=	entityManagerFactory.createEntityManager();
+EntityTransaction entityTransaction=	entityManager.getTransaction();
+AwardEntity awardEntity = entityManager.find(AwardEntity.class, id);
+entityTransaction.begin();
+entityManager.remove(awardEntity);
+entityTransaction.commit();
+entityManager.close();
+		return true;
+	}
+
+	
+	
 }

@@ -105,5 +105,43 @@ public class AwardServiceImple implements AwardService {
 		
 	}
 	
+	 
+	@Override
+	public Set<ConstraintViolation<AwardDTO>> validateAndUpdate(AwardDTO awardDTO) {
+		System.out.println("awardDTOs validateAndUpdate");
+		ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+		Validator validator = factory.getValidator();
+		Set<ConstraintViolation<AwardDTO>> violations = validator.validate(awardDTO);
+		if(!violations.isEmpty()) {
+			System.out.println("Violation founded");
+			return violations;
+		}else {
+			System.out.println("violations is not found");
+			AwardEntity entity = new AwardEntity();
+			entity.setAwardName(awardDTO.getAwardName());
+			entity.setAwardMadeBy(awardDTO.getAwardMadeBy());
+			entity.setFirstRecived(awardDTO.getFirstReciverName());
+			entity.setGivenBy(awardDTO.getGivenBy());
+			entity.setRecivedDate(awardDTO.getRecivedDate());
+			entity.setRecived(awardDTO.isRecived());
+			entity.setNot_Recived(awardDTO.isNot_Recived());
+		boolean saved=	this.awardRepository.update(entity);
+			System.out.println("Entity is Saved :" + saved);
+			return Collections.emptySet();
 
+		}
+		
+	}
+
+	@Override
+	public boolean validateAndDelete(int id) {
+	System.out.println("Running validateAndDelete");
+	if(id<0) {
+		return false;
+	}else {
+	boolean deleted=	this.awardRepository.delete(id);
+		System.out.println("deleted :"+deleted);
+		return deleted;
+	}
+}
 }
